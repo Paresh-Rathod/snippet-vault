@@ -1,15 +1,24 @@
-import js from "@eslint/js";
-import prettierPlugin from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
+import js from '@eslint/js';
+import globals from 'globals';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [
   js.configs.recommended,
+
   {
-    plugins: { prettier: prettierPlugin },
+    files: ['**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+      },
+    },
     rules: {
-      "prettier/prettier": "error",
-      "no-console": "off"
-    }
+      'no-console': 'off',
+    },
   },
-  prettierConfig
+
+  // turns off ESLint rules that conflict with Prettier formatting
+  prettierConfig,
 ];

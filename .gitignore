@@ -1,0 +1,32 @@
+# Ignore environment variables (secrets)
+.env
+**/.env
+
+# Ignore dependencies
+node_modules
+**/node_modules
+
+# Ignore build output
+dist
+build
+coverage
+
+
+# Ignore environment files (contains MongoDB URI, passwords, JWT secrets)
+.env
+server/.env
+client/.env
+
+# Ignore node modules and builds
+node_modules/
+server/node_modules/
+client/node_modules/
+
+dist/
+client/dist/
+build/
+client/build/
+
+# Other common ignores
+.DS_Store
+*.log
