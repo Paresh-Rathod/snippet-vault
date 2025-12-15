@@ -1,16 +1,16 @@
-# Code Snippet Vault:  MERN Code Snippet Manager
+# Code Snippet Vault – MERN Code Snippet Manager
 
-![MERN Stack](https: //img.shields.io/badge/MERN-MongoDB%20|%20Express%20|%20React%20|%20Node.js-brightgreen)
-![License](https: //img.shields.io/badge/License-MIT-blue)
-![GitHub stars](https: //img.shields.io/github/stars/Paresh-Rathod/snippet-vault?style=social)
-![GitHub forks](https: //img.shields.io/github/forks/Paresh-Rathod/snippet-vault?style=social)
+![MERN Stack](https://img.shields.io/badge/MERN-MongoDB%20|%20Express%20|%20React%20|%20Node.js-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![GitHub stars](https://img.shields.io/github/stars/Paresh-Rathod/snippet-vault?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Paresh-Rathod/snippet-vault?style=social)
 
 A **powerful, secure, and modern Code Snippet Manager** built with the full **MERN stack**. Perfect for learning full-stack development with real-world authentication and CRUD operations. The authentication and CRUD development entire MERN cycle app tutorial can be found on Canvas LMS course workspace. Here, this is simple working Code Snippet app with two versions to explore.
 
 > **Feel free to explore, learn, and modify!** The code is heavily commented for educational purposes.  
 > **Important Note: ** This repository contains **two frontend versions** for different learning stages: 
-> - `client/` → **Complete MERN app** with **user authentication (JWT login/register), protected routes, and full security**
-> - `client_old/` → **Simple unauthenticated version** (basic snippet GUI: great for beginners or quick testing)
+> - `client/` --> **Complete MERN app** with **user authentication (JWT login/register), protected routes, and full security**
+> - `client_old/` --> **Simple unauthenticated version** (basic snippet GUI: great for beginners or quick testing)
 
 Both frontends connect to the same backend and demonstrate the complete MERN cycle.
 
@@ -88,7 +88,7 @@ Run the main frontend (with auth)Bashcd ../client
 npm install
 
 # Create client/.env with VITE_API_URL=http: //localhost: 5000
-npm run devOpen http: //localhost: 5173 → Register → Login → Start managing snippets!
+npm run devOpen http: //localhost: 5173 --> Register --> Login --> Start managing snippets!
 Or run the simple versionBashcd ../client_old
 npm install
 npm run dev
