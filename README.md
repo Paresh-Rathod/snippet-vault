@@ -1,90 +1,112 @@
-Code Snippet Vault – MERN Code Snippet Manager
+# Code Snippet Vault – MERN Code Snippet Manager
 
-Feel free to clone and learn, the code is commented well for learning purposes. No Login Screen, it's a simple Code Snippet App.
-A powerful, secure, and modern Code Snippet Manager built with the MERN stack. Store, organize, edit, and delete your code snippets with user authentication.
-Live Demo: https://snippet-vault.onrender.com (after deployment)
-Backend API: https://snippet-vault-md6g.onrender.com/api/health
+![MERN Stack](https://img.shields.io/badge/MERN-MongoDB%20|%20Express%20|%20React%20|%20Node.js-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![GitHub stars](https://img.shields.io/github/stars/Paresh-Rathod/snippet-vault?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Paresh-Rathod/snippet-vault?style=social)
 
-🚀 Features
->> User registration & login with JWT authentication (Main tutorial on Canvas LMS)
->> Protected routes (dashboard only accessible when logged in)
->> Full CRUD operations for code snippets (Create, Read, Update, Delete)
->> Responsive design with Bootstrap
->> Secure token handling with localStorage & expiry checks
->> Environment-based configuration (no hard-coded secrets)
+A **powerful, secure, and modern Code Snippet Manager** built with the full **MERN stack**. Perfect for learning full-stack development with real-world authentication and CRUD operations. The authentication and CRUD development entire MERN cycle app tutorial can be found on Canvas LMS course workspace. Here, this is simple working Code Snippet app with two versions to explore.
 
-Your Dashboard Screenshots (Paste Here):
-Dashboard
-Main Dashboard with Snippets
-Create/Edit Snippet
-Add or Edit Snippet Form
+> **Feel free to explore, learn, and modify!** The code is heavily commented for educational purposes.  
+> **Important Note:** This repository contains **two frontend versions** for different learning stages:
+> - `client/` → **Complete MERN app** with **user authentication (JWT login/register), protected routes, and full security**
+> - `client_old/` → **Simple unauthenticated version** (basic snippet GUI – great for beginners or quick testing)
 
-🏗️ Project Structure
-medium.comyoutube.com
+Both frontends connect to the same backend and demonstrate the complete MERN cycle.
 
-textsnippet-vault/
-├── server/                  # Backend
+## 🚀 Features
+
+- Secure user registration & login with JWT authentication
+- Protected dashboard – only accessible when logged in
+- Full CRUD operations for code snippets (Create, Read, Update, Delete)
+- Responsive & clean UI powered by Bootstrap
+- Secure JWT handling with automatic expiry checks
+- Environment-based configuration (no hard-coded secrets)
+- Production-ready deployment on Render.com
+
+## 📸 App Screenshots (DARK MODE)
+![alt text](image-1.png)
+
+
+## 📸 App Screenshots (LIGHT MODE)
+![alt text](image-2.png)
+
+## 🏗️ Project Structure
+
+```bash
+snippet-vault/
+├── server/                          # Express + Node.js Backend
 │   ├── src/
-│   │   ├── config/
-│   │   ├── middleware/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── index.js
+│   │   ├── config/                  # Database connection
+│   │   ├── middleware/              # JWT authentication guard
+│   │   ├── models/                  # User & Snippet Mongoose schemas
+│   │   ├── routes/                  # Auth & snippets API endpoints
+│   │   └── index.js                 # Server entry point
 │   └── package.json
-├── client/                  # Frontend (Vite + React)
+│
+├── client/                          # Main Frontend (Vite + React + Full Auth)
 │   ├── src/
-│   │   ├── lib/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   ├── lib/                     # auth.js & api.js utilities
+│   │   ├── components/              # Reusable UI components
+│   │   ├── pages/                   # Login, Register, Dashboard
+│   │   ├── App.jsx                  # Routing & layout
+│   │   └── main.jsx                 # Bootstrap & React entry
 │   └── package.json
+│
+├── client_old/                      # Simple unauthenticated frontend (learning variant)
+│   ├── src/
+│   └── package.json
+│
 ├── .gitignore
 └── README.md
 
 
-Your Folder Structure Screenshot (Paste Here):
-Folder Structure
-
 🛠️ Tech Stack
-MongoDB – NoSQL database
-Express.js – Backend framework
-React (Vite) – Frontend UI
-Node.js – Runtime
-JWT – Authentication
-Axios – API calls
-Bootstrap – Styling
-Render.com – Deployment
 
-🚀 Deployment
-Backend: Render 
-Frontend: Render
+MongoDB – Flexible NoSQL database
+Express.js – Robust backend framework
+React (Vite) – Lightning-fast modern frontend
+Node.js – JavaScript runtime
+JWT – Secure token-based authentication
+Axios – Elegant API communication
+Bootstrap – Responsive and beautiful styling
+Render.com – Free & easy deployment platform
 
-Your Deployment Screenshots (Paste Here):
-![alt text](image.png)
 
-Live App
-📖 Step-by-Step Setup Guide
-(See full tutorial on Canvas: build from scratch, no cloning!)
+📖 How to Run Locally
 
-Create folders: server & client
-Setup backend (Express + Mongoose + JWT)
-Setup frontend (Vite + React + Axios + Router)
-Add environment variables
-Implement auth & CRUD
-Push to GitHub safely (with .gitignore)
-Deploy on Render.com
+Clone the repositoryBashgit clone https://github.com/Paresh-Rathod/snippet-vault.git
+cd snippet-vault
+Start the backendBashcd server
+npm install
+# Create server/.env with MONGO_URI and JWT_SECRET
+npm run dev
+Run the main frontend (with auth)Bashcd ../client
+npm install
+# Create client/.env with VITE_API_URL=http://localhost:5000
+npm run devOpen http://localhost:5173 → Register → Login → Start managing snippets!
+Or run the simple versionBashcd ../client_old
+npm install
+npm run dev
 
-🔒 Security Notes
-.env files never committed (protected by .gitignore)
-JWT stored securely with expiry checks
-Protected routes on both frontend & backend
+Detailed step-by-step build tutorial available on Canvas LMS – built completely from scratch!
+🔒 Security Best Practices
+
+.env files are never committed (protected by .gitignore)
+JWT tokens stored securely with automatic expiry handling
+All sensitive routes protected on both backend (middleware) and frontend (guards)
+No hard-coded secrets anywhere
 
 🤝 Contributing
-Contributions welcome! Fork, create a branch, and submit a PR.
+Contributions, bug reports, and feature requests are very welcome!
+Feel free to:
+
+Fork the repository
+Create a feature branch
+Submit a Pull Request
+
 📄 License
-MIT License – feel free to use and modify.
+This project is licensed under the MIT License – free to use, modify, and distribute.
 
 Built with ❤️ by Paresh Rathod
-
-Star this repo if you found it helpful! ⭐
+Star this repo if it helped you learn MERN full-stack development! ⭐
