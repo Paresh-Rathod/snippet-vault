@@ -166,11 +166,16 @@ app.delete('/snippets/:id', requireDb, async (req, res) => {
 
 connectToMongo()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+    // Health endpoint for Render and for quick curl testing
+    app.get("/health", (req, res) => res.status(200).send("ok"));
+
+    const port = process.env.PORT || PORT || 10000;
+
+    app.listen(port, "0.0.0.0", () => {
+      console.log(`Server running on port ${port}`);
     });
   })
   .catch((err) => {
-    console.error('MongoDB connection error:', err);
+    console.error("MongoDB connection error:", err);
     process.exit(1);
   });
