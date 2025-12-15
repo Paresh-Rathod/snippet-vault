@@ -1,4 +1,4 @@
-# Code Snippet Vault – MERN Code Snippet Manager
+# Code Snippet Vault: This is more fancy look and feel MERN Code Snippet Manager
 
 ![MERN Stack](https://img.shields.io/badge/MERN-MongoDB%20|%20Express%20|%20React%20|%20Node.js-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
