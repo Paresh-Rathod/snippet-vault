@@ -14,9 +14,9 @@ A **powerful, secure, and modern Code Snippet Manager** built with the full **ME
 
 Both frontends connect to the same backend and demonstrate the complete MERN cycle.
 
-==============
+
 ## 🚀 Features
-==============
+
 - Secure user registration & login with JWT authentication
 - Protected dashboard: only accessible when logged in
 - Full CRUD operations for code snippets (Create, Read, Update, Delete)
@@ -32,9 +32,9 @@ Both frontends connect to the same backend and demonstrate the complete MERN cyc
 ## 📸 App Screenshots (LIGHT MODE)
 ![alt text](image-2.png)
 
-==============
+
 ## 🏗️ Project Structure
-==============
+
 ```bash
 snippet-vault/
 ├── server/                          # Express + Node.js Backend
