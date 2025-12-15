@@ -675,7 +675,7 @@ export default function App() {
           <div className="brand">
             <div className="logo" aria-hidden="true" />
             <div className="title">
-              <h1>Snippet Vault</h1>
+              <h1>Code Snippet Vault App V1.2</h1>
               <div className="sub">Fast snippets, clean UI, real API</div>
             </div>
           </div>
