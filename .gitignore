@@ -42,3 +42,4 @@ client/.env
 # Vite-specific (your frontend uses Vite)
 .env.local
 .vite/
+
